@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+   {% block title %} IZBERI VALUTI {% endblock title %}
+
+
+    {% block content %}
+
+
+       {% if vse_valute %}
+
+          <form action="/valuta" method="post">
+
+             <label for="valute1">Izberi valuto:</label>
+             <select id="valute1" name="valuta1">
+             {% for valuta in vse_valute %}
+              <option value="{{ valuta }}" name="valuta1">{{ valuta }}</option>
+
+              {% endfor %}
+                 </select>
+
+
+             <label for="valute2">Izberi valuto:</label>
+             <select id="valute2" name="valuta2">
+             {% for valuta in vse_valute %}
+              <option value="{{ valuta }}" name="valuta2">{{ valuta }}</option>
+
+              {% endfor %}
+                 </select>
+
+
+
+              <label for="leto">Izberi valuto:</label>
+             <select id="leto" name="leto">
+             {% for leto in letnice %}
+              <option value="{{ leto }}" name="leto">{{ leto }}</option>
+
+              {% endfor %}
+                 </select>
+
+              <input type="submit" placeholder="potrdi">
+
+          </form>
+
+
+
+
+       {% endif %}
+    {% endblock content%}
