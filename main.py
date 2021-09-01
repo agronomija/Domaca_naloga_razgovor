@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 from funkcije import get_vse_valute, get_casovna_obdobja, get_tecaji, pretvorba
-
+import requests
 
 app = Flask(__name__)
 

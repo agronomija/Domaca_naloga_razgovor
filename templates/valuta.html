@@ -7,8 +7,9 @@
 
   {% block content %}
      {% if ime_valute1 %}
-       <h1>{{ ime_valute1 }}</h1>
-       <h1>{{ ime_valute2 }}</h1>
-       <h1>{{ leto }}</h1>
+       <p>Spodnji graf prikazuje gibanje in primerjavo med tečaji za <strong>{{ ime_valute1 }}</strong>
+           in <strong>{{ ime_valute2 }}</strong> glede na EUR-o,
+       katerega vrednost je vedno 1. Prikazani podatki so za leto <strong>{{ leto }}</strong></p>
+
      {% endif %}
   {% endblock content %}

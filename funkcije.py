@@ -23,11 +23,11 @@ def get_tecaji(year):
         if int(datum) == 2010:
             for tecaj in tecajnica:
                 if tecaj.get('oznaka') == 'USD':
-                    print('USD: ', tecaj.text)
+                    #print('USD: ', tecaj.text)
                     USD[cel_datum] = tecaj.text
 
                 if tecaj.get('oznaka') == 'GBP':
-                    print('GBP: ', tecaj.text)
+                    #print('GBP: ', tecaj.text)
                     GBP[cel_datum] = tecaj.text
     return GBP, USD #vrnemo dva slovarja, v vsakem pod kljuci shranjeni datumi, pod vrednostjo pa vrednost valute na tisti dan
 
@@ -44,7 +44,7 @@ def get_vse_valute():
 
         valuta = tecaj.get('oznaka') #iz attributa dobimo oznako valute.
         vsi_tecaji.add(valuta) #dodamo valuto v set
-    return sorted(list(vsi_tecaji)) #funkcija vrne seznam vseh valut
+    return sorted(list(vsi_tecaji)) #funkcija vrne seznam vseh valut, sortiranih po abecedi
 
 
 
@@ -61,7 +61,7 @@ def get_casovna_obdobja():
         datum = pretvorba(cel_datum)
         vsi_datumi.add(datum)
 
-    return sorted(list(vsi_datumi))
+    return sorted(list(vsi_datumi)) #vrne seznam vseh datumov, sortiranih od najzgodnejsega do zadnjega
 
 
 
@@ -83,7 +83,7 @@ def get_tecaji_vsi(year, valuta):
         if int(datum) == 2010:
             for tecaj in tecajnica:
                 if tecaj.get('oznaka') == valuta:
-                    print(f'{valuta} ', tecaj.text)
+                    #print(f'{valuta} ', tecaj.text)
                     EUR[cel_datum] = tecaj.text
 
 

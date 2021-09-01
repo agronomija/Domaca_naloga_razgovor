@@ -5,6 +5,7 @@
     {% block content %}
 
 
+     <p>Izberi dve valuti in pa leto, za katerega te zanima letna primerjava vrednosti: </p>
        {% if vse_valute %}
 
           <form action="/valuta" method="post">
@@ -28,7 +29,7 @@
 
 
 
-              <label for="leto">Izberi valuto:</label>
+              <label for="leto">Izberi leto:</label>
              <select id="leto" name="leto">
              {% for leto in letnice %}
               <option value="{{ leto }}" name="leto">{{ leto }}</option>
