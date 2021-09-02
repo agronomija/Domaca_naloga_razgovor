@@ -11,6 +11,17 @@
            in <strong>{{ ime_valute2 }}</strong> glede na EUR-o,
        katerega vrednost je vedno 1. Prikazani podatki so za leto <strong>{{ leto }}</strong></p>
 
+         <p><strong>Če je valuta None, to pomeni, da je datum ravno na vikend ali pa na praznik, ko tečajev niso beležili</strong></p>
+         <h3>{{ ime_valute1 }}</h3>
+         {% for datum in novo_obdobje %}
+           <p>{{ x1.get(datum) }}</p>
+         {% endfor %}
+
+         <h3>{{ ime_valute2 }}</h3>
+         {% for datum in novo_obdobje %}
+           <p>datum: {{ x2.get(datum) }}</p>
+         {% endfor %}
+
 
        <a href="/"><strong>Nazaj na izbiro valut</strong></a>
      {% endif %}
